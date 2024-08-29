@@ -1,105 +1,63 @@
-window.addEventListener('load',function(){
-    document.querySelector('body').classList.add("loaded")  
-  });
+const body = document.body
 
+const btnTheme = document.querySelector('.fa-moon')
+const btnHamburger = document.querySelector('.fa-bars')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-
-// Initial canvas size
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-let particleCount = calculateParticleCount();
-
-class Particle {
-    constructor() {
-        this.reset();
-        this.y = Math.random() * canvas.height;
-        this.fadeDelay = Math.random() * 600 + 100;
-        this.fadeStart = Date.now() + this.fadeDelay;
-        this.fadingOut = false;
-    }
-
-    reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.speed = Math.random() / 5 + 0.1;
-        this.opacity = 1;
-        this.fadeDelay = Math.random() * 600 + 100;
-        this.fadeStart = Date.now() + this.fadeDelay;
-        this.fadingOut = false;
-    }
-
-    update() {
-        this.y -= this.speed;
-        if (this.y < 0) {
-            this.reset();
-        }
-
-        if (!this.fadingOut && Date.now() > this.fadeStart) {
-            this.fadingOut = true;
-        }
-        
-        if (this.fadingOut) {
-            this.opacity -= 0.008;
-            if (this.opacity <= 0) {
-                this.reset();
-            }
-        }
-    }
-
-    draw() {
-        ctx.fillStyle = `rgba(${255 - (Math.random() * 255/2)}, 255, 255, ${this.opacity})`;
-        ctx.fillRect(this.x, this.y, 0.4, Math.random() * 2 + 1);
-    }
+const addThemeClass = (bodyClass, btnClass) => {
+  body.classList.add(bodyClass)
+  btnTheme.classList.add(btnClass)
 }
 
-function initParticles() {
-    particles = [];
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
+const getBodyTheme = localStorage.getItem('portfolio-theme')
+const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
+
+addThemeClass(getBodyTheme, getBtnTheme)
+
+const isDark = () => body.classList.contains('dark')
+
+const setTheme = (bodyClass, btnClass) => {
+
+	body.classList.remove(localStorage.getItem('portfolio-theme'))
+	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
+
+  addThemeClass(bodyClass, btnClass)
+
+	localStorage.setItem('portfolio-theme', bodyClass)
+	localStorage.setItem('portfolio-btn-theme', btnClass)
 }
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-    });
-    requestAnimationFrame(animate);
+const toggleTheme = () =>
+	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+
+btnTheme.addEventListener('click', toggleTheme)
+
+const displayList = () => {
+	const navUl = document.querySelector('.nav__list')
+
+	if (btnHamburger.classList.contains('fa-bars')) {
+		btnHamburger.classList.remove('fa-bars')
+		btnHamburger.classList.add('fa-times')
+		navUl.classList.add('display-nav-list')
+	} else {
+		btnHamburger.classList.remove('fa-times')
+		btnHamburger.classList.add('fa-bars')
+		navUl.classList.remove('display-nav-list')
+	}
 }
 
-function calculateParticleCount() {
-    return Math.floor((canvas.width * canvas.height) / 6000);
+btnHamburger.addEventListener('click', displayList)
+
+const scrollUp = () => {
+	const btnScrollTop = document.querySelector('.scroll-top')
+
+	if (
+		body.scrollTop > 500 ||
+		document.documentElement.scrollTop > 500
+	) {
+		btnScrollTop.style.display = 'block'
+	} else {
+		btnScrollTop.style.display = 'none'
+	}
 }
 
-function onResize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particleCount = calculateParticleCount();
-    initParticles();
-}
-
-window.addEventListener('resize', onResize);
-
-initParticles();
-animate();
+document.addEventListener('scroll', scrollUp)
