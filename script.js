@@ -1,3 +1,5 @@
+document.documentElement.scrollTop = 0;
+
 $(window).on('beforeunload', function() {
   $('body').hide();
   $(window).scrollTop(0);
