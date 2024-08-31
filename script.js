@@ -1,11 +1,10 @@
-document.documentElement.scrollTop = 0;
+const body = document.body
 
 $(window).on('beforeunload', function() {
   $('body').hide();
   $(window).scrollTop(0);
 });
 
-const body = document.body
 const btnTheme = document.querySelector('.fa-moon')
 const btnHamburger = document.querySelector('.fa-bars')
 
