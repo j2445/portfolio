@@ -413,82 +413,41 @@ main {
 
 /* --------------contact ------------------ */
 
-.contact img{
-  width: 50px;
+body{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.contact a{
-  display: block;
-  text-decoration: none;
-  color: #000000;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 150%;
-  padding: 1.5rem 0;
+.container{
+	width: 500px;
+	padding: 30px;
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+	background-color: #003b5b;
 }
-.social-media{
-  margin-top: 4rem;
+h4{
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: white;
 }
-.social-media img{
-  width: 40px;
-  transition: 300ms ease-in;
-
+input{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
 }
-.social-media img:hover{
-  transform:scale(1.2) rotate(-45deg);  
-}
-.social-media a{
-  margin: auto 1.5rem;
-}
-
-.contact-section .row{
-  display: flex;
-  /* flex-direction:unset; */
-}
-
-/* form design */
-input, textarea, button[type="submit"]{
-  border-radius: 20px;
-  background: #FEF4F2;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-
-}
-
 textarea{
-  width: 90%;
-height: 180px;
-text-indent: 20px;
+	width: 100%;
+	padding: 10px;
 }
-
-input[type="text"]{
-  width: 90%;
-  height: 40px;
-  margin: 10px auto;
-
-
-}
-input {
-  text-indent:20px;
-}
-input[type="email"]{
-  width: 90%;
-  height: 40px;
-  margin: 10px auto;
-
-}
-input[type="number"]{
-  width: 44%;
-  height: 40px;
-  margin: 10px auto;
-}
-input[type="submit"]{
-  width: 90%;
-  height: 40px;
-  margin: 20px auto;
-  background: #0c43da;
-
+#submit{
+	border: none;
+	background-color: orangered;
+	color: white;
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 5px;
 }
 #submit:hover{
-	background-color: #e72475;
+	background-color: #333333;
 }
