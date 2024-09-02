@@ -39,7 +39,7 @@
             <a class="link link--nav" href="#skills">Skills</a>
           </li>
           <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
+            <a class="link link--nav" href="#contactMe">Contact</a>
           </li>
         </ul>
 
@@ -285,15 +285,50 @@ I am passionate about my work. I’m always looking for an opportunity to do bet
       </section>
 
       <!-- Contact -->
-      <section class="section contact center" id="contact" >
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:joypatel201101@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-         <p  class="about__desc" style="text-align: justify;height: auto;width:300px;color: blue;">
-           <script src="https://sheetdb.io/s/f/izo79wagg6wdb.js"></script>
-         </p>
-      </section>
+
+      <div id="contactMe" class="section">
+    <div class="container-fluid">
+      <p class="title">-CONTACT</p>
+      <div class="contact-section">
+        <h2>GET IN TOUCH</h2>
+        <p class="para">I'm here and ready to bring your project ideas to life. Just a click away!</p>
+        <div class="row img-sec justify-content-center">
+        
+          <div class="col-md-6">
+            <div class="form">
+              <form method="post" action="https://script.google.com/macros/s/AKfycbyY3ADxOPDkuewyTiAnyUL-wIY6Heauht20xkmdSFAMxT_lT-KdlDocV7xlDnRT0AZo/exec" name="contact-form">
+                <input type="text" name="your-name" placeholder="Name"><br>
+                <input type="text" name="your-number" placeholder="Number"><br>
+                <input type="email" name="your-email" placeholder="Email"><br>
+                <textarea name="message" rows="7" placeholder="Your Message"></textarea><br>
+                <input type="submit" value="Submit" id="submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyY3ADxOPDkuewyTiAnyUL-wIY6Heauht20xkmdSFAMxT_lT-KdlDocV7xlDnRT0AZo/exec'
+
+
+const form = document.forms['contact-form']
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+  </script>
     </main>
 
     <footer class="footer">
