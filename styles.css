@@ -418,12 +418,13 @@ main {
 input, textarea, button[type="submit"]{
   border-radius: 20px;
   background: #FEF4F2;
+  color: black;
   border: 1px solid rgba(0, 0, 0, 0.2);
 
 }
 
 textarea{
-  width: 90%;
+width: 90%;
 height: 180px;
 text-indent: 20px;
 color: black;	
@@ -433,22 +434,25 @@ input[type="text"]{
   width: 90%;
   height: 40px;
   margin: 10px auto;
-
-
+  color: black;
 }
+
 input {
   text-indent:20px;
+  color: black;
 }
 input[type="email"]{
   width: 90%;
   height: 40px;
   margin: 10px auto;
+  color: black;
 
 }
 input[type="number"]{
   width: 44%;
   height: 40px;
   margin: 10px auto;
+  color: black;	
 }
 input[type="submit"]{
   width: 90%;
@@ -458,5 +462,5 @@ input[type="submit"]{
 
 }
 #submit:hover{
-	background-color: #e72475;
+background-color: #e72475;
 }
