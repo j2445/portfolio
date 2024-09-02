@@ -414,68 +414,59 @@ main {
 /* --------------contact ------------------ */
 
 
-/* form design */
-input, textarea, button[type="submit"]{
-  border-radius: 20px;
-  background: #FEF4F2;
-  color: black;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 550px
-  display: flex;
-  justify-content: center;
-}
-
-textarea{
-width: 550px
-height: 180px;
-text-indent: 20px;
-color: black;	
-display: flex;
-justify-content: center;
-}
-
-input[type="text"]{
-  width: 550px
-  height: 40px;
-  margin: 10px auto;
-  color: black;
-  display: flex;
-  justify-content: center;
-}
-
-input {
-  text-indent:20px;
-  color: black;
-  width: 550px;
-  display: flex;
- justify-content: center;
-}
-input[type="email"]{
-  width: 550px
-  height: 40px;
-  margin: 10px auto;
-  color: black;
-  display: flex;
-  justify-content: center;
-
-}
-input[type="number"]{
-  width: 550px;
-  height: 40px;
-  margin: 10px auto;
-  color: black;	
-  display: flex;
-  justify-content: center;
-}
-input[type="submit"]{
-  width: 550px;
-  height: 40px;
-  margin: 20px auto;
-  background: #0c43da;
-  display: flex;
-  justify-content: center;
-
-}
-#submit:hover{
-background-color: #e72475;
-}
+        /* form design */
+        input, textarea, button[type="submit"]{
+          border-radius: 20px;
+          background: #FEF4F2;
+          color: black;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: center;
+          width: 400px;
+        
+        }
+        
+        textarea{
+        width: 400px;
+        height: 180px;
+        text-indent: 20px;
+        color: black;	
+        justify-content: center;
+        margin: 10px auto;
+        
+        }
+        
+        input[type="text"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;
+          justify-content: center;
+        }
+        
+        input {
+          text-indent:20px;
+          color: black;
+        }
+        input[type="email"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;
+        
+        }
+        input[type="number"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;	
+        }
+        input[type="submit"]{
+          height: 40px;
+          margin: 20px auto;
+          background: #0c43da;
+          width: 300px;
+        }
+        #submit:hover{
+        background-color: #e72475;
+        }
