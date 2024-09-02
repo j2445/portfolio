@@ -414,35 +414,48 @@ main {
 /* --------------contact ------------------ */
 
 
-.container{
-	width: 500px;
-	padding: 30px;
-	border: 1px solid #eeeeee;
-	border-radius: 10px;
-	background-color: #003b5b;
+/* form design */
+input, textarea, button[type="submit"]{
+  border-radius: 20px;
+  background: #FEF4F2;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
 }
-h4{
-	margin-bottom: 10px;
-	font-size: 24px;
-	color: white;
-}
-input{
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 10px;
-}
+
 textarea{
-	width: 100%;
-	padding: 10px;
+  width: 90%;
+height: 180px;
+text-indent: 20px;
 }
-#submit{
-	border: none;
-	background-color: orangered;
-	color: white;
-	width: 200px;
-	margin-top: 10px;
-	border-radius: 5px;
+
+input[type="text"]{
+  width: 90%;
+  height: 40px;
+  margin: 10px auto;
+
+
+}
+input {
+  text-indent:20px;
+}
+input[type="email"]{
+  width: 90%;
+  height: 40px;
+  margin: 10px auto;
+
+}
+input[type="number"]{
+  width: 44%;
+  height: 40px;
+  margin: 10px auto;
+}
+input[type="submit"]{
+  width: 90%;
+  height: 40px;
+  margin: 20px auto;
+  background: #0c43da;
+
 }
 #submit:hover{
-	background-color: #333333;
+	background-color: #e72475;
 }
