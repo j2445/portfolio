@@ -428,6 +428,8 @@ width: 550px
 height: 180px;
 text-indent: 20px;
 color: black;	
+display: flex;
+justify-content: center;
 }
 
 input[type="text"]{
