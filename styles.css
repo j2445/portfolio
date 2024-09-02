@@ -413,12 +413,7 @@ main {
 
 /* --------------contact ------------------ */
 
-body{
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+
 .container{
 	width: 500px;
 	padding: 30px;
