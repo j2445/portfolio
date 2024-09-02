@@ -421,6 +421,8 @@ input, textarea, button[type="submit"]{
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 550px
+  display: flex;
+  justify-content: center;
 }
 
 textarea{
@@ -437,18 +439,24 @@ input[type="text"]{
   height: 40px;
   margin: 10px auto;
   color: black;
+  display: flex;
+  justify-content: center;
 }
 
 input {
   text-indent:20px;
   color: black;
-  width: 550px
+  width: 550px;
+  display: flex;
+ justify-content: center;
 }
 input[type="email"]{
   width: 550px
   height: 40px;
   margin: 10px auto;
   color: black;
+  display: flex;
+  justify-content: center;
 
 }
 input[type="number"]{
@@ -456,12 +464,16 @@ input[type="number"]{
   height: 40px;
   margin: 10px auto;
   color: black;	
+  display: flex;
+  justify-content: center;
 }
 input[type="submit"]{
   width: 550px;
   height: 40px;
   margin: 20px auto;
   background: #0c43da;
+  display: flex;
+  justify-content: center;
 
 }
 #submit:hover{
