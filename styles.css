@@ -426,6 +426,7 @@ textarea{
   width: 90%;
 height: 180px;
 text-indent: 20px;
+color: black;	
 }
 
 input[type="text"]{
