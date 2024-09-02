@@ -420,18 +420,18 @@ input, textarea, button[type="submit"]{
   background: #FEF4F2;
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 350px;
+  width: 550px
 }
 
 textarea{
-width: 350px;
+width: 550px
 height: 180px;
 text-indent: 20px;
 color: black;	
 }
 
 input[type="text"]{
-  width: 90%;
+  width: 550px
   height: 40px;
   margin: 10px auto;
   color: black;
@@ -440,22 +440,23 @@ input[type="text"]{
 input {
   text-indent:20px;
   color: black;
+  width: 550px
 }
 input[type="email"]{
-  width: 90%;
+  width: 550px
   height: 40px;
   margin: 10px auto;
   color: black;
 
 }
 input[type="number"]{
-  width: 44%;
+  width: 550px;
   height: 40px;
   margin: 10px auto;
   color: black;	
 }
 input[type="submit"]{
-  width: 90%;
+  width: 550px;
   height: 40px;
   margin: 20px auto;
   background: #0c43da;
