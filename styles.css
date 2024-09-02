@@ -420,11 +420,11 @@ input, textarea, button[type="submit"]{
   background: #FEF4F2;
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.2);
-
+  width: 350px;
 }
 
 textarea{
-width: 90%;
+width: 350px;
 height: 180px;
 text-indent: 20px;
 color: black;	
