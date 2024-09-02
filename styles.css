@@ -336,9 +336,7 @@ main {
   margin: 0.5em;
 }
 
-.contact {
-  flex-direction: column;
-}
+
 
 .footer {
   padding: 3em 0;
@@ -493,35 +491,4 @@ input[type="submit"]{
 }
 #submit:hover{
 	background-color: #e72475;
-}
-
-
-::placeholder {
-  padding-left: 15px;
-  font-family: 'Nunito';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 41px;
-color: rgba(41, 41, 41, 0.5);
-}
-button[type="submit"] {
-  background: #F87474;
-  border: 1px solid #F87474;
-  border-radius: 20px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 41px;
-  color: #FFFFFF;
-  margin-top: 20px;
-  padding: 0 15px;
-  /* transition: background .5s, border 0.5s, color 0.5s ease-in-out; Add a 0s transition for the specified properties */
-}
-
-button[type="submit"]:hover {
-  background: linear-gradient(90deg, rgba(79,1,1,1) 0%, rgba(242,79,79,1) 81%) !important; ; /* Add your desired gradient colors */
-  border: 1px solid #ffffff;
-  color: rgb(255, 255, 255);
 }
